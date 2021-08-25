@@ -1,5 +1,5 @@
 # ORGANIZE-EM', THE MINIMALIST'S TASK MANAGER
-#### Video Demo:  <https://youtu.be/Aw5Cjpk5vSA>
+#### Video Demo:
 #### Description:
 
 Brief Project Description:
