@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main%}
+
+    <body class = "body" style = "background-color: #3d4849">
+
+        <header class = "title">
+                 Welcome to Organize-Em'!
+        </header>
+
+        <h3 class = "ptext">
+            "Productivity made easy"
+        </h3>
+
+        <!-- Picture of something -->
+        <img class = "image" id = "homepic" src= "https://www.blog.rsrit.com/hubfs/Six%20resources%20for%20increasing%20productivity%20at%20work-01-01.jpg" width = "40%" height = "40%">
+
+        <!-- Explanation about what the page is and how to use it -->
+        <p class = "regtext">
+            <br> Everyone burns out every once and a while. Sometimes all you need to get motivated and start your day is a lil organization!
+            <br> Introducing, Organize-Em'!
+            A minimalistic listing website that is nice and easy way for you to organize your daily tasks.
+            <br>
+            <br> Instructions: <br>
+            To enter a task: Enter your task in the "Task Name" box, then select a priority level
+            <br>
+            To delete a task: Enter the task # in "Task #" Box
+            <br>
+            To organize tasks: Choose an option from the "Select a Order" box
+        </p>
+
+        <!-- Input from user -->
+        <h3 class ="ptext">
+            Lets Get Started
+        </h3>
+
+        <br>
+
+        <h3 class = "ptext">
+            Add a Task!
+        </h3>
+
+        <form action = "/" method = "POST" class = "centered">
+            <input name = "task" placeholder = "Task Name" type = "text">
+
+            <select name="priority" id = "priority">
+                <option value="" selected disabled>Select a Priority</option>
+                <option value="0High">High</option>
+                <option value="1Medium">Medium</option>
+                <option value="2Low">Low</option>
+            </select>
+
+            <button type = "submit">Submit</button>
+        </form>
+
+        <br>
+
+        <!--Remove Task-->
+        <h3 class ="ptext">
+            Remove/Complete Task!
+        </h3>
+
+        <form action = "/" method = "POST" class = "centered">
+            <input name = "deltask" placeholder = "Task #" type = "integer">
+            <button type = "submit">Submit</button>
+        </form>
+
+        <br>
+
+        <!--Changing order -->
+        <h3 class = "ptext">
+            Change Viewing Order!
+        </h3>
+
+        <!-- Order By -->
+        <form action = "/" method = "POST" class = "centered">
+            <select name = "order" id = "order">
+                <option value="" selected disabled>Select an Order</option>
+                <option value="0">High to Low</option>
+                <option value="1">Low to High</option>
+            </select>
+            <button type = "submit">Change Order</button>
+        </form>
+
+        <br>
+
+        <!-- This is the task table -->
+        <table class = "table">
+            <thead class = "thead-light">
+                <tr>
+                    <th class = "centered" scope = "col">Task #</th>
+                    <th class = "centered" scope = "col">Task</th>
+                    <th class = "centered" scope = "col">Priority</th>
+                </tr>
+            </thead>
+            <tbody class = "table-dark">
+                {% for item in tasklist %}
+                <tr>
+                    <td class = "regtext" >{{item["id"]}}</td>
+                    <td class = "regtext" >{{item["task"]}}</td>
+                    <td class = "regtext" >{{item["priority"]}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+    </body>
+{% endblock %}
