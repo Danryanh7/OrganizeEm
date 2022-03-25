@@ -1,6 +1,7 @@
 # Organize-Em', The Minimalist's Task Manager
 #### Video Demo: <https://www.youtube.com/watch?v=9fcMObOzPD4>
-#### Description:
+
+# Description:
 
 Brief Project Description:
 Organize-Em' is a minimalistic task managing website designed with simplicity and an intuitive design.
