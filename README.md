@@ -1,4 +1,4 @@
-# ORGANIZE-EM', THE MINIMALIST'S TASK MANAGER
+# Organize-Em', The Minimalist's Task Manager
 #### Video Demo: <https://www.youtube.com/watch?v=9fcMObOzPD4>
 #### Description:
 
@@ -99,3 +99,13 @@ index.hrml and tasklist.
 
 tasks.db: This SQL database contains the "users" table which has columns "id", "task" and "priority".
 This is where the properties of a task will be contained and manipulated.
+
+# Models
+### Default View
+![Screen Shot 2022-03-25 at 4 41 21 PM](https://user-images.githubusercontent.com/89366190/160198013-ea125281-06c7-42e8-b6b2-1d1bb1922353.png)
+
+### Populated Tasks Table
+![Screen Shot 2022-03-25 at 4 39 44 PM](https://user-images.githubusercontent.com/89366190/160198020-f663d324-28c5-40e6-a8f0-fad86343c147.png)
+
+### Error Screen
+![Screen Shot 2022-03-25 at 4 40 05 PM](https://user-images.githubusercontent.com/89366190/160198029-90041341-c803-4dfc-94e6-f59280202831.png)
